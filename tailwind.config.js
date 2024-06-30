@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Space Mono']
+      },
+      screens: {
+        '923px': '923px'
       }
     },
   },
