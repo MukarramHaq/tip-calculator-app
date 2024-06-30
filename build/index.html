@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
+</head>
+<body class="font-body bg-[#c5e4e7]">
+  <header class="pt-[3rem] pb-[3rem] text-[#5e7a7d] flex flex-col items-center bg-[#c5e4e7] uppercase tracking-[0.8rem]">
+    <span class="font-[700]">spli</span>
+    <span class="font-[700]">tter</span>
+  </header>
+  <main>
+    <div class="rounded-2xl bg-white p-4 min-h-screen">
+      <div>
+        <h4 class="mb-2 font-semibold text-[#5e7a7d] text-sm mt-3">Bill</h4>
+        <div class="bg-[#f3f8fb] flex justify-between pt-2 pb-2 pl-4 pr-4 rounded-lg mb-7">
+          <p class="text-xl text-[#5e7a7d]">$</p>
+          <h4 class="text-xl font-[700] text-[#00474a]">142.55</h4>
+           <!-- <input class="bg-[#f3f8fb] text-right" type="text" placeholder="0" > -->
+        </div>
+        <h4 class="font-[700] text-[#5e7a7d] text-sm mb-4">Select Tip %</h4>
+        <div class="grid grid-cols-2 font-[700] text-white gap-3 text-xl mb-7">
+          <button class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">5%</button>
+          <button class="bg-[#00474a] rounded-md hover:bg-[#26c2ad] hover:text-black">10%</button>
+          <button class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">15%</button>
+          <button class="bg-[#00474a] rounded-md hover:bg-[#26c2ad] hover:text-black">25%</button>
+          <button class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">50%</button>
+          <button class="bg-[#f3f8fb] text-[#5e7a7d] rounded-md hover:border-2 hover:border-green-800 hover:text-black">Custom</button>
+        </div>
+        <h4 class="font-[700] text-[#5e7a7d] text-sm mb-2">Number of People</h4>
+        <div class="flex justify-between bg-[#f3f8fb] pt-2 pb-2 pl-4 pr-4 rounded-lg mb-7">
+          <img class="self-center" src="images/icon-person.svg" alt="">
+          <p class="text-xl font-[700] text-[#00474a]">5</p>
+        </div>
+      </div>
+      <div class="rounded-lg bg-[#00474a] text-white p-4">
+        <div class="mb-4 flex justify-between">
+          <div>
+            <h5 class="font-[700] text-sm">Tip Amount</h5>
+            <p class="text-xs leading-6 text-[#5e7a7d]">/ person</p>
+          </div>
+          <h4 class="self-center text-2xl font-[700] text-[#9fe8e0]">$4.27</h4>
+        </div>
+        <div class="mb-4 flex justify-between">
+          <div>
+            <h5 class="font-[700] text-sm">Total</h5>
+            <p class="text-xs leading-6 text-[#5e7a7d]">/ person</p>
+          </div>
+          <h4 class="self-center font-[700] text-2xl text-[#9fe8e0]">$32.79</h4>
+        </div>
+        <button class="uppercase w-[100%] rounded p-2 text-black font-[700] bg-[#26c2ad]">Reset</button>
+      </div>
+    </div>
+  </main>
+  <!-- <style>
+    div{
+      color: #00494d
+    }
+  </style> -->
+</body>
+</html>
