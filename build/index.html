@@ -45,24 +45,24 @@
           <p class="text-xl text-[#5e7a7d]">$</p>
           <!-- <h4 class="text-xl font-[700] text-[#00474a]">142.55</h4> -->
            <!-- Add border on click using JS -->
-           <input class="bg-[#f3f8fb] text-right border-none focus:outline-none text-xl font-[700] text-[#00474a] cursor-pointer" type="number" placeholder="0" >
+           <input id="bill" class="bg-[#f3f8fb] text-right border-none focus:outline-none text-xl font-[700] text-[#00474a] cursor-pointer" type="number" placeholder="0" >
         </div>
         <h4 class="font-[700] text-[#5e7a7d] text-sm mb-4">Select Tip %</h4>
         <div class="grid grid-cols-2 font-[700] text-white gap-3 text-xl mb-7 923px:grid-cols-3">
-          <button class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">5%</button>
-          <button class="bg-[#00474a] rounded-md hover:bg-[#26c2ad] hover:text-black">10%</button>
-          <button class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">15%</button>
-          <button class="bg-[#00474a] rounded-md hover:bg-[#26c2ad] hover:text-black">25%</button>
-          <button class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">50%</button>
+          <button id="five-perc" class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">5%</button>
+          <button id="ten-perc" class="bg-[#00474a] rounded-md hover:bg-[#26c2ad] hover:text-black">10%</button>
+          <button id="fifteen-perc" class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">15%</button>
+          <button id="twenty-five-perc" class="bg-[#00474a] rounded-md hover:bg-[#26c2ad] hover:text-black">25%</button>
+          <button id="fifty-perc" class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">50%</button>
           <!-- <button class="bg-[#f3f8fb] text-[#5e7a7d] rounded-md hover:border-2 hover:border-green-800 hover:text-black">Custom</button> -->
            <!-- Add border when clicked using JS -->
-          <input class="text-center cursor-pointer text-[#00474a] border-none focus:outline-none" type="text" placeholder="Custom">
+          <input id="custom-tip" class="text-center cursor-pointer text-[#00474a] border-none focus:outline-none" type="number" placeholder="Custom">
         </div>
         <h4 class="font-[700] text-[#5e7a7d] text-sm mb-2">Number of People</h4>
         <div class="flex justify-between bg-[#f3f8fb] pt-2 pb-2 pl-4 pr-4 rounded-lg mb-7 cursor-pointer">
           <img class="self-center" src="images/icon-person.svg" alt="">
           <!-- <p class="text-xl font-[700] text-[#00474a]">5</p> -->
-          <input class="bg-[#f3f8fb] text-right border-none focus:outline-none text-xl font-[700] text-[#00474a] cursor-pointer" type="number" placeholder="0">
+          <input id="people" class="bg-[#f3f8fb] text-right border-none focus:outline-none text-xl font-[700] text-[#00474a] cursor-pointer" type="number" placeholder="0">
         </div>
         <!-- 923px:flex 923px:flex-col -->
       </div>
@@ -72,23 +72,19 @@
             <h5 class="font-[700] text-sm">Tip Amount</h5>
             <p class="text-xs leading-6 text-[#5e7a7d]">/ person</p>
           </div>
-          <h4 class="self-start text-2xl 923px:text-5xl font-[700] text-[#9fe8e0]">$0.00</h4>
+          <h4 id="tip-amount" class="self-start text-2xl 923px:text-5xl font-[700] text-[#9fe8e0]">$0.00</h4>
         </div>
         <div class="mb-4 flex justify-between">
           <div class="self-center">
             <h5 class="font-[700] text-sm">Total</h5>
             <p class="text-xs leading-6 text-[#5e7a7d]">/ person</p>
           </div>
-          <h4 class="self-center font-[700] text-2xl 923px:text-5xl text-[#9fe8e0]">$0.00</h4>
+          <h4 id="total-amount" class="self-center font-[700] text-2xl 923px:text-5xl text-[#9fe8e0]">$0.00</h4>
         </div>
-        <button class="uppercase w-[100%] rounded p-2 text-black font-[700] bg-[#26c2ad] 923px:mt-auto 923px:mb-[30px] 923px:bg-[#0D6868] 923px:text-[#025e62] 923px:hover:bg-[#9fe8e0]">Reset</button>
+        <button id="reset-btn" class="uppercase w-[100%] rounded p-2 text-black font-[700] bg-[#26c2ad] 923px:mt-auto 923px:mb-[30px] 923px:bg-[#0D6868] 923px:text-[#025e62] 923px:hover:bg-[#9fe8e0]">Reset</button>
       </div>
     </div>
   </main>
-  <!-- <style>
-    div{
-      color: #00494d
-    }
-  </style> -->
+  <script defer src="index.js"></script>
 </body>
 </html>
