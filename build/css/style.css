@@ -22,6 +22,11 @@
   /* 2 */
 }
 
+#bill,
+#people{
+  width: 10%;
+}
+
 ::before,
 ::after {
   --tw-content: '';

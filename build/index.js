@@ -20,8 +20,8 @@ function total(tipPercentage){
     const bill = elements.billEl;
     const numberOfPeople = elements.peopleEl;
 
-    const tipPerPerson = (parseInt(bill.value) * (tipPercentage / 100)) / parseInt(numberOfPeople.value);
-    const totalPerPerson = (parseInt(bill.value) + parseInt(bill.value) * (tipPercentage / 100)) / parseInt(numberOfPeople.value);
+    const tipPerPerson = (parseFloat(bill.value) * (tipPercentage / 100)) / parseFloat(numberOfPeople.value);
+    const totalPerPerson = (parseFloat(bill.value) + parseFloat(bill.value) * (tipPercentage / 100)) / parseFloat(numberOfPeople.value);
 
     elements.expenses.tipAmountEl.textContent = `$${tipPerPerson.toFixed(2)}`
     elements.expenses.totalAmountEl.textContent = `$${totalPerPerson.toFixed(2)}`
