@@ -17,6 +17,7 @@ const elements = {
 }
 
 function total(tipPercentage){
+    
     const bill = elements.billEl;
     const numberOfPeople = elements.peopleEl;
 
@@ -27,30 +28,58 @@ function total(tipPercentage){
     elements.expenses.totalAmountEl.textContent = `$${totalPerPerson.toFixed(2)}`
 }
 
+function validateInputCustom(input){
+    if(parseFloat(input.value) < 0){
+        input.value = ''
+    }
+}
+
+function validateNumberOfPeople(input){
+    const tipAmount = elements.expenses.tipAmountEl
+    if(parseFloat(input.value) <= 0){
+        window.alert("Number of People cannot be zero or less than zero")
+        input.value = 1
+    }
+     
+}
+
 elements.tip.fiveEl.addEventListener("click", function(){
+    validateNumberOfPeople(elements.peopleEl)
     total(5);
 })
 
 elements.tip.tenEl.addEventListener("click", function(){
+    validateNumberOfPeople(elements.peopleEl)
     total(10);
 })
 
 elements.tip.fifteenEl.addEventListener("click", function(){
+    validateNumberOfPeople(elements.peopleEl)
     total(15);
+    
 })
 
 elements.tip.twentyFiveEl.addEventListener("click", function(){
+    validateNumberOfPeople(elements.peopleEl)
     total(25);
+    
 })
 
 elements.tip.fiftyEl.addEventListener("click", function(){
+    validateNumberOfPeople(elements.peopleEl)
     total(50);
+    
 })
 
 elements.tip.customTipEl.addEventListener("input", function(){
+    validateInputCustom(elements.tip.customTipEl) //Validate Input
     const customTip = parseFloat(elements.tip.customTipEl.value)
     if(!isNaN(customTip)){
-        total(customTip)
+        elements.peopleEl.addEventListener("input", function() {
+            validateNumberOfPeople(elements.peopleEl) //Validate Input
+            total(customTip);
+        });
+
     }
 })
 

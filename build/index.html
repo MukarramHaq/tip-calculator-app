@@ -10,7 +10,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer/dist/bouncer.polyfills.min.js"></script>
+
+  <!-- Get minor updates and patch fixes within a major version -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1/dist/bouncer.polyfills.min.js"></script>
+
+  <!-- Get patch fixes within a minor version -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.0/dist/bouncer.polyfills.min.js"></script>
+
+  <!-- Get a specific version -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.0.0/dist/bouncer.polyfills.min.js"></script>
+
   <title>Frontend Mentor | Tip calculator app</title>
+
+  <style> 
+    .remove-arrow::-webkit-inner-spin-button, 
+    .remove-arrow::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+    } 
+
+    .remove-arrow { 
+        -moz-appearance: textfield; 
+    } 
+</style>
 
   <!-- Bill
 
@@ -41,12 +64,12 @@
     <div class="rounded-2xl bg-white p-4 923px:w-[923px] max-w-[923px] min-[932px]:flex 923px:gap-12 923px:pl-[50px] 923px:pt-[32px] 923px:pb-[32px]">
       <div class="min-[923px]:w-[50%] 923px:max-w-[377px]">
         <h4 class="mb-2 font-semibold text-[#5e7a7d] text-sm mt-3">Bill</h4>
-        <div class="bg-[#f3f8fb] flex justify-between pt-2 pb-2 pl-4 pr-4 rounded-lg mb-7 cursor-pointer">
-          <p class="text-xl text-[#5e7a7d]">$</p>
-          <!-- <h4 class="text-xl font-[700] text-[#00474a]">142.55</h4> -->
-           <!-- Add border on click using JS -->
-           <input id="bill" class="bg-[#f3f8fb] text-right text-xl font-[700] text-[#00474a] cursor-pointer" type="number" placeholder="0" >
-        </div>
+          <div class="bg-[#f3f8fb] hover:border-2 hover:border-green-400 flex justify-between pt-2 pb-2 pl-4 pr-4 rounded-lg mb-7 cursor-pointer">
+            <p class="text-xl text-[#5e7a7d]">$</p>
+            <!-- <h4 class="text-xl font-[700] text-[#00474a]">142.55</h4> -->
+             <!-- Add border on click using JS -->
+             <input id="bill" class="bg-[#f3f8fb] remove-arrow text-right text-xl font-[700] text-[#00474a] cursor-pointer focus:outline-none" type="number" placeholder="0" min="0" required>
+          </div>
         <h4 class="font-[700] text-[#5e7a7d] text-sm mb-4">Select Tip %</h4>
         <div class="grid grid-cols-2 font-[700] text-white gap-3 text-xl mb-7 923px:grid-cols-3">
           <button id="five-perc" class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">5%</button>
@@ -56,13 +79,13 @@
           <button id="fifty-perc" class="bg-[#00474a] p-2 rounded-md hover:bg-[#26c2ad] hover:text-black">50%</button>
           <!-- <button class="bg-[#f3f8fb] text-[#5e7a7d] rounded-md hover:border-2 hover:border-green-800 hover:text-black">Custom</button> -->
            <!-- Add border when clicked using JS -->
-          <input id="custom-tip" class="text-center cursor-pointer text-[#00474a] border-none focus:outline-none" type="number" placeholder="Custom">
+          <input id="custom-tip" class="text-center hover:border-2 hover:border-green-400 remove-arrow cursor-pointer text-[#00474a] focus:outline-none" type="number" placeholder="Custom" min="1">
         </div>
         <h4 class="font-[700] text-[#5e7a7d] text-sm mb-2">Number of People</h4>
-        <div class="flex justify-between bg-[#f3f8fb] pt-2 pb-2 pl-4 pr-4 rounded-lg mb-7 cursor-pointer">
+        <div class="flex justify-between hover:border-2 hover:border-green-400 bg-[#f3f8fb] pt-2 pb-2 pl-4 pr-4 rounded-lg mb-7 cursor-pointer">
           <img class="self-center" src="images/icon-person.svg" alt="">
           <!-- <p class="text-xl font-[700] text-[#00474a]">5</p> -->
-          <input id="people" class="bg-[#f3f8fb] text-right text-xl font-[700] text-[#00474a] cursor-pointer" type="number" placeholder="0" value="1">
+          <input id="people" class="bg-[#f3f8fb] remove-arrow text-right text-xl font-[700] text-[#00474a] cursor-pointer focus:outline-none" type="number" placeholder="0" min="1">
         </div>
         <!-- 923px:flex 923px:flex-col -->
       </div>
