@@ -46,6 +46,7 @@ function validateNumberOfPeople(input){
 elements.tip.fiveEl.addEventListener("click", function(){
     validateNumberOfPeople(elements.peopleEl)
     total(5);
+    
 })
 
 elements.tip.tenEl.addEventListener("click", function(){
